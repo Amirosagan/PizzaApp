@@ -1,0 +1,43 @@
+﻿@page
+@model Pizza.Pages.PizzaModel
+@{
+}
+
+<div class="text-center">
+    <div class="main-text">
+        <h1 class="text-capitalize display-4"> our great selection of pizzas!!</h1>
+        <h4>Choose one, or try our pizza Builder! Then Order and Done!</h4>
+        <h4>No need to give any of your details</h4>
+        <h4>We already know everything!! </h4>
+        <p class="small-text"><i>Only one pizza per order</i></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 mb-5">
+                <div class="row w-100 my-own-cont">
+                    <div class="col-4">
+                        <img src="~/images/pizza_PNG44077.png" alt="pizza" class="w-100"/>
+                    </div>
+                    <div class="col-8 align-items-center">
+                        <div class="align-middle my-own-text">
+                            <h3 style="text-align:left">Create your own pizza</h3>
+                            <p style="text-align:left">Make your own Pizza with our Pizza Maker!</p>
+                            <a class="btn btn-primary" style="float:left" asp-area="" asp-page="Form/CustomPizza">Try It!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach (var pizza in Model.FakePizzaDb)
+            {
+                var name = pizza.pizzaName;
+            <div class="col-4 mb-4" >
+                <h3>@name</h3>
+                <h4>Cost @pizza.price LE</h4>
+                <a class="btn btn-dark mt-1" asp-area="" asp-page="/LastCheak/CheakOut" asp-route-PizzaName ="@name" asp-route-price ="@pizza.price">Get That</a>
+                   
+            </div>
+            }
+        </div>
+    </div>
+
+</div>

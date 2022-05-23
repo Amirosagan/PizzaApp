@@ -1,0 +1,29 @@
+﻿@page
+@model Pizza.Pages.OrdersModel
+@{
+}
+<h1>Orders</h1>
+<hr />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">PizzaName</th>
+            <th scope="col">Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pizza in Model.pizzaOrders)
+        {
+            <tr>
+                <th scope="row">@pizza.Id</th>
+                <td>@pizza.PizzaName</td>
+                <td>@pizza.Price</td>
+                
+            </tr>
+        }
+
+    </tbody>
+</table>
+

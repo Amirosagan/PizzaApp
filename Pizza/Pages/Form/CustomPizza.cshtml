@@ -1,0 +1,50 @@
+﻿@page
+@model Pizza.Pages.Form.CustomPizzaModel
+@{
+}
+
+<div class="container">
+    <form action="" method="post">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control w-50" id="floatingInput" asp-for="Pizza.pizzaName" placeholder="Entre your pizza name here ...">
+            <label for="floatingInput">Pizza Name</label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckTomato" asp-for="Pizza.tomato">
+            <label class="form-check-label" for="flexCheckTomato">
+                Tomato souse
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckPeproni" asp-for="Pizza.peproni">
+            <label class="form-check-label" for="flexCheckPeproni">
+                Peproni souse
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckCheese" asp-for="Pizza.cheese">
+            <label class="form-check-label" for="flexCheckCheese">
+                Cheese
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckMushroom" asp-for="Pizza.mushroom">
+            <label class="form-check-label" for="flexCheckMushroom">
+                Mushroom
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckTuna" asp-for="Pizza.tuna">
+            <label class="form-check-label" for="flexCheckTuna">
+                Tuna
+            </label>
+        </div>
+
+        <input type="submit" class="btn btn-primary"/>
+    </form>
+</div>

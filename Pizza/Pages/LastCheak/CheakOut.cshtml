@@ -1,0 +1,13 @@
+﻿@page
+@model Pizza.Pages.LastCheak.CheakOutModel
+@{
+}
+<h1>your  order!!</h1>
+<div class="align-content-center">
+    <div class="col-4 mx-auto">
+        <p>your order for <span style="color : blueviolet">@Model.PizzaName</span> pizza is ready!</p>
+        <p>total price = <span style="color : crimson">@Model.price</span> LE</p>
+        <br />  
+        <a class="btn btn-danger mt-1 mx-auto" asp-area="" asp-page="Thanks">Confirm Order</a>
+    </div>
+</div>
